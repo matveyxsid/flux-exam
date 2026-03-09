@@ -10,7 +10,7 @@ spec:
   storageNamespace: flux-demo
   chart:
     spec:
-      version: "12.x"
+      version: 12.1.15
   values:
     auth:
       username: admin
@@ -23,4 +23,6 @@ spec:
         limits:
           cpu: 250m
           memory: 250Mi
+      persistence:
+        enabled: false
     fullnameOverride: psql-0
