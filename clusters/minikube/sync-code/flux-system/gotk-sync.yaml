@@ -8,7 +8,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: master
+    branch: feature/001
   secretRef:
     name: flux-system
   url: https://github.com/matveyxsid/flux-exam.git
