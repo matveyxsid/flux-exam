@@ -10,7 +10,7 @@ spec:
   storageNamespace: flux-demo
   chart:
     spec:
-      version: 12.1.15
+      version: ">=15.0.0"
   values:
     auth:
       username: admin
