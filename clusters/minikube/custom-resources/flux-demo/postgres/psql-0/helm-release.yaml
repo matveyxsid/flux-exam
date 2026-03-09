@@ -7,9 +7,6 @@ metadata:
 spec:
   interval: 5m
   targetNamespace: flux-demo
-  chart:
-    spec:
-      version: 12.1.15
   values:
     auth:
       username: admin
