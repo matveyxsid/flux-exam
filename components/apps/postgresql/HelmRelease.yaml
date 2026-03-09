@@ -1,0 +1,34 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: postgresql
+  namespace: flux-system
+spec:
+  interval: 5m
+  releaseName: postgresql
+  targetNamespace: <NAMESPACE>
+  storageNamespace: <NAMESPACE>
+  chart:
+    spec:
+      chart: postgresql
+      version: 12.1.15  # postgresql version is 15.2.0 by default
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+  values:
+    global:
+      storageClass: ""
+    auth:
+      enablePostgresUser: true
+      existingSecret: ""
+    primary:
+      service:
+        type: "ClusterIP"
+        ports:
+          postgresql: 5432
+        loadBalancerIP: ""
+      persistence:
+        enabled: true
+        size: 8Gi
