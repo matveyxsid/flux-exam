@@ -5,9 +5,9 @@ metadata:
   name: psql-0
   namespace: flux-system
 spec:
+  fullnameOverride: psql-0
   interval: 5m
   targetNamespace: flux-demo
-  storageNamespace: flux-demo
   chart:
     spec:
       version: 12.1.15
@@ -25,4 +25,3 @@ spec:
           memory: 250Mi
       persistence:
         enabled: false
-    fullnameOverride: psql-0
