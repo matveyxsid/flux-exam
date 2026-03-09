@@ -11,7 +11,7 @@ spec:
   chart:
     spec:
       chart: postgresql
-      version: "18.2.0" # postgresql version is 15.2.0 by default
+      version: "15.x" # postgresql version is 15.2.0 by default
       sourceRef:
         kind: HelmRepository
         name: bitnami
