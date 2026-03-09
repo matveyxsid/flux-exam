@@ -10,10 +10,10 @@ spec:
 
       - op: replace
         path: /metadata/name
-        value: postgres-psql-0
+        value: psql-0
       - op: replace
         path: /spec/releaseName
-        value: postgres-psql-0
+        value: psql-0
     target:
       kind: HelmRelease
       name: postgresql
