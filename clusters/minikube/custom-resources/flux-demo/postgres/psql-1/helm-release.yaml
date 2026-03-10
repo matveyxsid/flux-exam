@@ -5,6 +5,7 @@ metadata:
   name: psql-1
   namespace: flux-system
 spec:
+  releaseName: psql-1
   interval: 5m
   targetNamespace: flux-demo
   chart:
