@@ -1,0 +1,27 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: postgresql
+  namespace: flux-system
+spec:
+  interval: 5m
+  targetNamespace: flux-demo
+  chart:
+    spec:
+      version: "18.3.0"
+  values:
+    auth:
+      username: admin
+      password: admin123
+    primary:
+      resources:
+        requests:
+          cpu: 250m
+          memory: 250Mi
+        limits:
+          cpu: 250m
+          memory: 250Mi
+      persistence:
+        enabled: false
+    fullnameOverride: psql-1
