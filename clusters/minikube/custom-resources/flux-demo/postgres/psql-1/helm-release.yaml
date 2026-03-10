@@ -29,4 +29,4 @@ spec:
           memory: 250Mi
       persistence:
         enabled: false
-  fullnameOverride: psql-1
+    fullnameOverride: psql-1
