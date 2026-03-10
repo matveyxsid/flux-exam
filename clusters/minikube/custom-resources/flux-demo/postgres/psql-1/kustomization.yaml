@@ -14,9 +14,6 @@ patches:
       - op: replace
         path: /spec/releaseName
         value: psql-1
-      - op: add
-        path: /spec/values/fullnameOverride
-        value: psql-1
     target:
       kind: HelmRelease
       name: psql-1
