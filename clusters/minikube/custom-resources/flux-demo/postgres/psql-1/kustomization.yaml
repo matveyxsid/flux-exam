@@ -4,6 +4,16 @@ kind: Kustomization
 resources:
   - ../../../../../../components/apps/postgresql
 patches:
-  - path: helm-release.yaml
+  - patch: |
+      - op: replace
+        path: /metadata/name
+        value: psql-1
+      - op: replace
+        path: /spec/releaseName
+        value: psql-1
+      - op: replace
+        path: /spec/values/fullnameOverride
+        value: psql-1
     target:
       kind: HelmRelease
+      name: postgresql

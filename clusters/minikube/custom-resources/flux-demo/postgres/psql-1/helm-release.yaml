@@ -9,7 +9,12 @@ spec:
   targetNamespace: flux-demo
   chart:
     spec:
+      chart: postgresql
       version: "18.3.0"
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
   values:
     auth:
       username: admin

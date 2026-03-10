@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: ./clusters/minikube/custom-resources/flux-demo/postgres/psql-1
+  path: ./clusters/minikube/custom-resources/flux-demo/postgres/psql-0
   prune: false
   sourceRef:
     kind: GitRepository
