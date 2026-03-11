@@ -8,13 +8,19 @@ patches:
     target:
       kind: HelmRelease
       name: postgresql
-  # - patch: |
-  #     - op: replace
-  #       path: /metadata/name
-  #       value: psql-1
-  #     - op: replace
-  #       path: /spec/releaseName
-  #       value: psql-1
-  #   target:
-  #     kind: HelmRelease
-  #     name: psql-1
+
+  - target:
+      kind: HelmRelease
+      group: helm.toolkit.fluxcd.io
+      version: v2
+      name: postgresql
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: psql-2
+      - op: replace
+        path: /spec/releaseName
+        value: psql-2
+      - op: add
+        path: /spec/values/fullnameOverride
+        value: psql-2
