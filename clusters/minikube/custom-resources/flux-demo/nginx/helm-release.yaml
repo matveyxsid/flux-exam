@@ -1,0 +1,19 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: nginx
+  namespace: flux-system
+spec:
+  interval: 5m
+  targetNamespace: flux-demo
+  values:
+    service:
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 250m
+        memory: 250Mi
+      limits:
+        cpu: 250m
+        memory: 250Mi
