@@ -1,0 +1,26 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../../../../../components/apps/postgresql
+patches:
+  - path: helm-release.yaml
+    target:
+      kind: HelmRelease
+      name: postgresql
+
+  - target:
+      kind: HelmRelease
+      group: helm.toolkit.fluxcd.io
+      version: v2
+      name: postgresql
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: psql-2
+      - op: replace
+        path: /spec/releaseName
+        value: psql-2
+      - op: add
+        path: /spec/values/fullnameOverride
+        value: psql-2
