@@ -13,7 +13,7 @@ spec:
       version: "18.3.0"
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: bitnamilegacy
         namespace: flux-system
   values:
     auth:
