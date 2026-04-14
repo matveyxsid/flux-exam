@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-only-default-to-psql-0
+  namespace: flux-demo
+spec:
+  podSelector:
+    matchLabels:
+      statefulset.kubernetes.io/pod-name: psql-0-0
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: default
+    ports:
+    - protocol: TCP
+      port: 5432
