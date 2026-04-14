@@ -3,4 +3,3 @@ kind: Kustomization
 
 resources:
   - bitnami.yaml
-  - bitnamilegacy.yaml

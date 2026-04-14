@@ -18,6 +18,7 @@ spec:
   values:
     image:
       repository: bitnamilegacy/postgresql
+      tag: 17.6.0
     auth:
       username: admin
       password: admin123

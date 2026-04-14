@@ -8,6 +8,8 @@ spec:
   interval: 5m
   targetNamespace: flux-demo
   values:
+    image:
+      repository: bitnamilegacy/nginx
     service:
       type: ClusterIP
     resources:
