@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ip-cm
+  namespace: flux-demo
+data:
+  ip: 8.8.8.8/32

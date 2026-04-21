@@ -1,12 +1,13 @@
+
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: only-default-to-psql-0
+  name: ip-cm
   namespace: flux-system
 spec:
   interval: 1m
-  path: ./clusters/minikube/custom-resources/flux-demo/np
+  path: ./clusters/minikube/custom-resources/flux-demo/configmaps
   prune: true
   sourceRef:
     kind: GitRepository
