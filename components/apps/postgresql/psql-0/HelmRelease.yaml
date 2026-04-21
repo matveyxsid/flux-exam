@@ -33,3 +33,5 @@ spec:
       persistence:
         enabled: false
     fullnameOverride: psql-0
+    networkPolicy:
+      enabled: false
