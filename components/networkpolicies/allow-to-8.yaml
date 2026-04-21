@@ -10,4 +10,4 @@ spec:
   egress:
   - to:
     - ipBlock:
-        cidr: ${ip}
+        cidr: 8.8.8.8/32 # change to cm
