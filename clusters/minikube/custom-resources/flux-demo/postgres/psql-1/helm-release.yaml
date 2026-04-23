@@ -23,5 +23,5 @@ spec:
           memory: 250Mi
       persistence:
         enabled: false
-    networkPolicy:
-      enabled: false
+      networkPolicy:
+        enabled: false

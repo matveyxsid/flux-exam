@@ -32,6 +32,6 @@ spec:
           memory: 250Mi
       persistence:
         enabled: false
+      networkPolicy:
+        enabled: false
     fullnameOverride: psql-0
-    networkPolicy:
-      enabled: false
